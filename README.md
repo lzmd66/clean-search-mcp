@@ -1,11 +1,11 @@
 # clean-search-mcp 🧹
 
-A lightweight MCP (Model Context Protocol) service that provides **clean, spam-free search results** for AI agents. Filters out content farms, SEO garbage, and low-quality sites before they reach your LLM.
+A lightweight MCP (Model Context Protocol) service that provides **clean, spam-free search results** for AI agents. Filters out content farms, malware sites, SEO garbage, and low-quality content before they reach your LLM.
 
 ## Features
 
 - **Three search engines** — Yandex + Bing + DuckDuckGo auto-fallback
-- **176K+ domain blocklist** — auto-updated from 25+ community sources, covers malware/scam/ads/content farms
+- **176K+ domain blocklist** — auto-updated from 25+ community sources, covers malware/scam/ads/trackers/content farms
 - **Three-layer filtering** — domain blacklist → content rules → quality scoring
 - **Content extraction** — full page text via trafilatura + selectolax
 - **Result scoring** — 0-1 quality score (official docs 0.8 > tutorials 0.6 > garbage 0)

@@ -43,26 +43,10 @@ BLACKLIST_SUBSCRIPTIONS = [
     # 中文中文黑名单
     "https://raw.githubusercontent.com/cobaltdisco/Google-Chinese-Results-Blocklist/master/uBlacklist_subscription.txt",
 
-    # MisakaMikoto - 中文内容农场 & 低质站
-    "https://raw.githubusercontent.com/MisakaMikoto-35c5/ublacklist-rules/main/content-farm.txt",
-    "https://raw.githubusercontent.com/MisakaMikoto-35c5/ublacklist-rules/main/bad-content.txt",
-
-    # Scyrte - 屏蔽 CSDN 等
-    "https://raw.githubusercontent.com/Scyrte/uBlacklist-Subscription/master/blocklist.txt",
-
-    # NotaInutilis Super SEO Spam Suppressor
-    "https://raw.githubusercontent.com/NotaInutilis/Super-SEO-Spam-Suppressor/main/blocklist.txt",
-
     # popcar2 BadWebsiteBlocklist (AI spam, SEO bait)
     "https://raw.githubusercontent.com/popcar2/BadWebsiteBlocklist/main/uBlacklist.txt",
 
-    # 终结内容农场
-    # ✗ meolalo/end-content-farm — 仓库已删除
-    # ✗ MisakaMikoto-35c5（2个）— 仓库已删除
-    # ✗ Scyrte — 仓库已删除
-    # ✗ NotaInutilis — 仓库已删除
-
-    # ☆ 新补充的源
+    # Peter Lowe 广告追踪列表 (40K+)
     "https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt",
     "https://raw.githubusercontent.com/fmhy/FMHYFilterlist/main/filterlist-wildcard-urls.txt",
     "https://raw.githubusercontent.com/PRiMENON/uBlacklist/main/uBlacklist.txt",
