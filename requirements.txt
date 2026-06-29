@@ -1,0 +1,8 @@
+mcp
+httpx
+selectolax
+trafilatura
+duckduckgo-search
+
+# optional deep mode:
+playwright

@@ -1,0 +1,18 @@
+# cache
+.clean_search_cache/
+.blacklist_cache.txt
+.user_blacklist.txt
+.bad_results.txt
+
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# env
+.env
+.venv/
+venv/
