@@ -57,29 +57,44 @@ BLACKLIST_SUBSCRIPTIONS = [
     "https://raw.githubusercontent.com/popcar2/BadWebsiteBlocklist/main/uBlacklist.txt",
 
     # 终结内容农场
-    "https://raw.githubusercontent.com/meolalo/end-content-farm/main/uBlacklist.txt",
+    # ✗ meolalo/end-content-farm — 仓库已删除
+    # ✗ MisakaMikoto-35c5（2个）— 仓库已删除
+    # ✗ Scyrte — 仓库已删除
+    # ✗ NotaInutilis — 仓库已删除
 
-    # Peter Lowe 广告追踪列表 (40K+)
+    # ☆ 新补充的源
+    "https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt",
+    "https://raw.githubusercontent.com/fmhy/FMHYFilterlist/main/filterlist-wildcard-urls.txt",
+    "https://raw.githubusercontent.com/PRiMENON/uBlacklist/main/uBlacklist.txt",
+    "https://raw.githubusercontent.com/nicoleahmed/nicoles-ublacklist/main/combined_list.txt",
+    "https://raw.githubusercontent.com/arosh/ublacklist-stackoverflow-translation/master/uBlacklist.txt",
+    "https://raw.githubusercontent.com/ngoomie/uBlacklist-suspicious-downloads/main/list.txt",
+    "https://raw.githubusercontent.com/agsimmons/ai-content-blocklist/refs/heads/main/uBlacklist.txt",
+    "https://raw.githubusercontent.com/iorate/ublacklist-example-subscription/master/uBlacklist.txt",
+    "https://raw.githubusercontent.com/rjaus/ublacklist-pinterest/main/ublacklist-pinterest.txt",
+    "https://raw.githubusercontent.com/rjaus/ublacklist-yelp/main/ublacklist-yelp.txt",
+
+    # 保留的旧源（仍然有效）
     "https://pgl.yoyo.org/as/serverlist.php?hostformat=plain&mimetype=plaintext&prepend=*://*.&append=/*&showintro=0",
-
-    # 国际文章/转载拦截
     "https://raw.githubusercontent.com/quenhus/uBlock-Origin-dev-filter/main/dist/other_format/uBlacklist/all.txt",
-
-    # laylavish AI 内容黑名单
-    "https://raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlockOrigin.txt",
-
-    # wdmpa content-farm-list
     "https://raw.githubusercontent.com/wdmpa/content-farm-list/main/uBlacklist.txt",
 
-    # 镜像: MisakaMikoto
-    "https://gh-proxy.com/raw.githubusercontent.com/MisakaMikoto-35c5/ublacklist-rules/main/content-farm.txt",
-    "https://gh-proxy.com/raw.githubusercontent.com/MisakaMikoto-35c5/ublacklist-rules/main/bad-content.txt",
+    # 🆕 安全/恶意软件/钓鱼类
+    "https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn/hosts",
+    "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt",
+    "https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt",
+    "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/BaseFilter/sections/adservers.txt",
+    "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt",
 
-    # 镜像: popcar2
-    "https://gh-proxy.com/raw.githubusercontent.com/popcar2/BadWebsiteBlocklist/main/uBlacklist.txt",
+    # 🆕 中文补充
+    "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts",
+    "https://raw.githubusercontent.com/vokins/yhosts/master/hosts",
+    "https://raw.githubusercontent.com/neoFelhz/neohosts/gh-pages/basic/hosts.txt",
 
-    # 镜像: wdmpa
-    "https://gh-proxy.com/raw.githubusercontent.com/wdmpa/content-farm-list/main/uBlacklist.txt",
+    # 镜像
+    "https://gh-proxy.com/raw.githubusercontent.com/laylavish/uBlockOrigin-HUGE-AI-Blocklist/main/list_uBlacklist.txt",
+    "https://gh-proxy.com/raw.githubusercontent.com/fmhy/FMHYFilterlist/main/filterlist-wildcard-urls.txt",
+    "https://gh-proxy.com/raw.githubusercontent.com/nicoleahmed/nicoles-ublacklist/main/combined_list.txt",
 ]
 
 BLACKLIST_CACHE_FILE = ".blacklist_cache.txt"
