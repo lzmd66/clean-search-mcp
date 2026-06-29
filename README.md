@@ -5,7 +5,7 @@ A lightweight MCP (Model Context Protocol) service that provides **clean, spam-f
 ## Features
 
 - **Three search engines** — Yandex + Bing + DuckDuckGo auto-fallback
-- **28K+ domain blocklist** — auto-updated from 15+ community sources, covers CN/EN/JP/KR
+- **176K+ domain blocklist** — auto-updated from 25+ community sources, covers malware/scam/ads/content farms
 - **Three-layer filtering** — domain blacklist → content rules → quality scoring
 - **Content extraction** — full page text via trafilatura + selectolax
 - **Result scoring** — 0-1 quality score (official docs 0.8 > tutorials 0.6 > garbage 0)
