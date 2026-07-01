@@ -86,5 +86,42 @@ async def report_bad_result(url: str) -> dict:
     return {"ok": ok, "msg": "reported_and_domain_blocked" if ok else "invalid_url_or_write_failed", "url": url}
 
 
+# ===== 本地增强工具（需要 FireFox + Playwright，仅本地可用）=====
+
+import subprocess
+
+
+@mcp.tool()
+async def deep_search(query: str, max_results: int = 5) -> list[dict]:
+    """深度搜索。用 FireFox 浏览器真实渲染，能过 Cloudflare 和反爬。
+    
+    需要本地安装 Playwright + FireFox 浏览器。
+    Yandex/Bing 搜不到的、被风控的站，用这个。
+    """
+    try:
+        result = subprocess.run(
+            ["F:/Python313/python.exe", "F:/hermes/firefox_search.py", query],
+            capture_output=True, text=True, timeout=60
+        )
+        if result.returncode != 0:
+            return [{"title": f"搜索异常: {result.stderr[:200]}", "url": "", "snippet": "", "content": "", "score": 0.0}]
+        
+        import json as _json
+        data = _json.loads(result.stdout)
+        results = data.get("results", [])
+        out = []
+        for r in results[:max_results]:
+            out.append({
+                "title": r.get("title", ""),
+                "url": r.get("url", ""),
+                "snippet": r.get("snippet", ""),
+                "content": "",
+                "score": 0.7,
+            })
+        return out
+    except Exception as e:
+        return [{"title": f"搜索失败: {e}", "url": "", "snippet": "", "content": "", "score": 0.0}]
+
+
 if __name__ == "__main__":
     mcp.run()

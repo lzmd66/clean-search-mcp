@@ -138,6 +138,22 @@ async def _fetch_many_playwright(urls: list[str]) -> dict[str, str]:
     return result
 
 
+async def _fetch_one_scrapling(url: str) -> str:
+    """用本地 Scrapling 服务抓取（能过 Cloudflare 和反爬）。"""
+    try:
+        import httpx as _h
+        resp = await _h.AsyncClient(timeout=15).get(
+            "http://127.0.0.1:18083/fetch-text",
+            params={"url": url},
+        )
+        if resp.status_code == 200:
+            data = resp.json()
+            return (data.get("text") or data.get("result") or "")[: config.MAX_CONTENT_BYTES]
+        return ""
+    except Exception:
+        return ""
+
+
 async def fetch_many(urls: list[str], deep_mode: bool = False) -> dict[str, str]:
     if not urls:
         return {}
@@ -164,6 +180,14 @@ async def fetch_many(urls: list[str], deep_mode: bool = False) -> dict[str, str]
         need_deep = need_deep[: max(0, int(config.DEEP_MAX_PAGES))]
         deep_result = await _fetch_many_playwright(need_deep)
         for url, html in deep_result.items():
+            if html:
+                result[url] = html
+
+    # Scrapling 兜底：httpx 和 Playwright 都抓不到时，走本地爬虫
+    scrapling_urls = [url for url in misses if not result.get(url)]
+    if scrapling_urls:
+        for url in scrapling_urls:
+            html = await _fetch_one_scrapling(url)
             if html:
                 result[url] = html
     for url in misses:

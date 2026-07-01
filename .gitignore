@@ -1,18 +1,13 @@
-# cache
-.clean_search_cache/
-.blacklist_cache.txt
-.user_blacklist.txt
-.bad_results.txt
-
-# python
 __pycache__/
 *.pyc
-*.pyo
+.clean_search_cache/
+.blacklist_cache.txt
+.blacklist_cache.txt.bak
+.merged_blacklist.txt
+.user_blacklist_urls.txt
+.user_blacklist.txt
+.bad_results.txt
+.env
 *.egg-info/
 dist/
 build/
-
-# env
-.env
-.venv/
-venv/
